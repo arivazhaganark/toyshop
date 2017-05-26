@@ -1,0 +1,15 @@
+---------- Date: 2017-05-24 18:11:04 ~ IP : 127.0.0.1 ----------
+REQUEST URI : /index.php?route=product/product&product_id=42
+MOD DETAILS:
+   modFile   : /opt/lampp/htdocs/toyshop/vqmod/xml/al_ordercallback.xml
+   id        : Order callback or one click to order module for Opencart 1.5.x versions
+   version   : 1.0
+   vqmver    : 2.0>
+   author    : LIAL (dev@instup.com)
+
+File Name    : catalog/view/theme/*/template/product/product.tpl(0)
+VQModObject::applyMod - SEARCH NOT FOUND (SKIPPED): <input type="button" value="<?php echo $button_cart; ?>" id="button-cart" class="button" />
+
+----------------------------------------------------------------------
+
+

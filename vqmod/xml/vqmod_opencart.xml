@@ -1,0 +1,170 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<modification>
+	<id>VQMOD CORE FOR OPENCART - DO NOT REMOVE</id>
+	<version>1.4.x and above</version>
+	<vqmver required="true">2.5.0</vqmver>
+	<author>vqmod.com</author>
+	
+	<file name="system/startup.php,system/engine/*.php,system/library/*.php,admin/controller/extension/*.php">
+		<operation error="skip" info="For non OCMod includes/requires">
+			<search position="replace" regex="true"><![CDATA[~(require|include)(_once)?\((?!modification\()([^)]+)~]]></search>
+			<add><![CDATA[$1$2(VQMod::modCheck($3)]]></add>
+		</operation>
+		<operation error="skip" info="For OCMod includes/requires - OPERATION MUST BE AFTER NON OCMOD INCLUDES/REQUIRES OPERATION">
+			<search position="replace" regex="true"><![CDATA[~(require|include)(_once)?\(modification\(([^)]+)~]]></search>
+			<add><![CDATA[$1$2(VQMod::modCheck(modification($3), $3]]></add>
+		</operation>
+	</file>
+	
+	<file name="catalog/controller/common/footer.php">
+		<operation error="skip" info="test">
+			<search position="after"><![CDATA[
+			$data['text_newsletter'] = $this->language->get('text_newsletter');
+			]]></search>
+			<add><![CDATA[
+			$data['text_phone'] = $this->language->get('text_phone');
+			$data['text1_phone'] = $this->language->get('text1_phone');
+			$data['text_time'] = $this->language->get('text_time');
+			$data['text1_time'] = $this->language->get('text1_time');
+			$data['text_shipping'] = $this->language->get('text_shipping');
+			$data['text1_shipping'] = $this->language->get('text1_shipping');
+			$data['text_money'] = $this->language->get('text_money');
+			$data['text1_money'] = $this->language->get('text1_money');
+			$data['content_block2'] = $this->load->controller('common/content_block2');
+			$data['content_block3'] = $this->load->controller('common/content_block3');
+			$data['content_block5'] = $this->load->controller('common/content_block5');
+			$data['content_block6'] = $this->load->controller('common/content_block6');
+			$data['content_block7'] = $this->load->controller('common/content_block7');
+			$data['footer_title'] = $this->language->get('footer_title');
+			$data['text_about'] = $this->language->get('text_about');
+			$data['contact_info'] = $this->language->get('contact_info');
+			$data['text_newletter'] = $this->language->get('text_newletter');
+			$data['popular_categories'] = $this->language->get('popular_categories');
+			$data['category1'] = $this->language->get('category1');
+			$data['category2'] = $this->language->get('category2');
+			$data['category3'] = $this->language->get('category3');
+			$data['category4'] = $this->language->get('category4');
+			$data['category5'] = $this->language->get('category5');
+			$data['category6'] = $this->language->get('category6');
+			$data['category7'] = $this->language->get('category7');
+			$data['category8'] = $this->language->get('category8');
+			$data['category9'] = $this->language->get('category9');
+			$data['category10'] = $this->language->get('category10');
+			$data['category11'] = $this->language->get('category11');
+			$data['category12'] = $this->language->get('category12');
+			$data['text_info'] = $this->language->get('text_info');
+			$data['text_dynamicus'] = $this->language->get('text_dynamicus');
+			$data['text_terms'] = $this->language->get('text_terms');
+			$data['text_gift'] = $this->language->get('text_gift');
+			]]></add>
+		</operation>
+		<operation error="skip" info="test">
+			<search position="after"><![CDATA[
+			$data['newsletter'] = $this->url->link('account/newsletter', '', 'SSL');
+			]]></search>
+			<add><![CDATA[
+			$data['address'] = $this->config->get('config_address');
+			$data['telephone'] = $this->config->get('config_telephone');
+			$data['email'] = $this->config->get('config_email');
+			$data['geocode'] = $this->config->get('config_geocode');
+			]]></add>
+		</operation>
+	</file>
+	
+	<file name="catalog/controller/common/cart.php">
+		<operation error="skip" info="test">
+			<search position="after"><![CDATA[
+			$data['text_cart'] = $this->language->get('text_cart');
+			]]></search>
+			<add><![CDATA[
+			$data['text1_items'] = $this->language->get('text1_items');
+			$data['text2_items'] = $this->language->get('text2_items');
+			$data['text3_items'] = $this->language->get('text3_items');
+			]]></add>
+		</operation>
+	</file>
+	
+	
+	<file name="catalog/controller/common/header.php">
+		<operation error="skip" info="test">
+			<search position="after"><![CDATA[
+			$data['text_all'] = $this->language->get('text_all');
+			]]></search>
+			<add><![CDATA[
+			$data['text_free'] = $this->language->get('text_free');
+			$data['text1_free'] = $this->language->get('text1_free');
+			$data['text_gift'] = $this->language->get('text_gift');
+			$data['text1_gift'] = $this->language->get('text1_gift');
+			$data['text_daily'] = $this->language->get('text_daily');
+			$data['text1_daily'] = $this->language->get('text1_daily');
+			$data['address'] = $this->config->get('config_address');
+			$data['telephone'] = $this->config->get('config_telephone');
+			$data['email'] = $this->config->get('config_email');
+			$data['text_address'] = $this->language->get('text_address');
+			$data['text_telephone'] = $this->language->get('text_telephone');
+			$data['text_email'] = $this->language->get('text_email');
+			$data['text_sale'] = $this->language->get('text_sale');
+			$data['content_block'] = $this->load->controller('common/content_block');
+			$data['content_block1'] = $this->load->controller('common/content_block1');
+			$data['content_block2'] = $this->load->controller('common/content_block2');
+			$data['text_msg'] = $this->language->get('text_msg');
+			$data['content_banner'] = $this->load->controller('common/content_banner');
+			$data['top_banner'] = $this->load->controller('common/top_banner');
+			]]></add>
+		</operation>
+	</file>
+	
+	<file name="catalog/controller/common/home.php">
+	
+		<operation error="skip" info="test">
+			<search position="after"><![CDATA[
+			$data['content_bottom'] = $this->load->controller('common/content_bottom');
+			]]></search>
+			<add><![CDATA[
+			$data['content_block1'] = $this->load->controller('common/content_block1');
+			$data['top_banner'] = $this->load->controller('common/top_banner');
+			$data['content_banner'] = $this->load->controller('common/content_banner');
+			$data['content_block2'] = $this->load->controller('common/content_block2');
+			$data['content_block3'] = $this->load->controller('common/content_block3');
+			$data['content_block4'] = $this->load->controller('common/content_block4');
+			$data['content_block5'] = $this->load->controller('common/content_block5');
+			$data['content_banner'] = $this->load->controller('common/content_banner');
+			$data['top_banner'] = $this->load->controller('common/top_banner');
+			$data['top_banner1'] = $this->load->controller('common/top_banner1');
+			]]></add>
+		</operation>
+	</file>
+	
+	<file name="catalog/controller/product/category.php">
+		<operation error="skip" info="test">
+			<search position="after"><![CDATA[
+			$data['header'] = $this->load->controller('common/header');
+			]]></search>
+			<add><![CDATA[
+			$data['content_block2'] = $this->load->controller('common/content_block2');
+			]]></add>
+		</operation>
+	</file>
+	
+	<file name="catalog/controller/product/product.php">
+		<operation error="skip" info="test">
+			<search position="after"><![CDATA[
+			$data['header'] = $this->load->controller('common/header');
+			]]></search>
+			<add><![CDATA[
+			$data['content_block2'] = $this->load->controller('common/content_block2');
+			]]></add>
+		</operation>	
+		<operation error="skip" info="test">
+			<search position="after"><![CDATA[
+			$data['button_continue'] = $this->language->get('button_continue');
+			]]></search>
+			<add><![CDATA[
+			$data['free_shipping'] = $this->language->get('free_shipping');
+			$data['text_shipping'] = $this->language->get('text_shipping');
+			$data['unlimited'] = $this->language->get('unlimited');
+			$data['text_unlimited'] = $this->language->get('text_unlimited');
+			]]></add>
+		</operation>
+	</file>
+</modification>
