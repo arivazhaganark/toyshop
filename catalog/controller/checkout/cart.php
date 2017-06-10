@@ -229,6 +229,7 @@ class ControllerCheckoutCart extends Controller {
 			$data['continue'] = $this->url->link('common/home');
 
 			$data['checkout'] = $this->url->link('checkout/checkout', '', 'SSL');
+			$data['quoterequest'] = $this->url->link('module/requestquote', '', 'SSL');
 
 			$this->load->model('extension/extension');
 

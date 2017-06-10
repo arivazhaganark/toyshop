@@ -105,12 +105,12 @@ type="text/javascript"></script>
 				<div id="top-links" class="nav pull-right">
 				<div class="box-link">
 					<ul class="list-inline links">
-						<li class="dropdown"><a class="account" href="<?php echo $account; ?>"><?php echo $text_account; ?></a></li>
+						<!--<li class="dropdown"><a class="account" href="<?php echo $account; ?>"><?php echo $text_account; ?></a></li>-->
 					  <li><a class="wishlist" href="<?php echo $wishlist; ?>" id="wishlist-total" title="<?php echo $text_wishlist; ?>"> <span><?php echo $text_wishlist; ?></span></a></li>
 					<?php if ($logged) { ?>
-						<li><a href="<?php echo $logout; ?>"><?php echo $text_logout; ?></a></li>
+						<!--<li><a href="<?php echo $logout; ?>"><?php echo $text_logout; ?></a></li>-->
 						<?php } else { ?>
-							<li><a href="<?php echo $login; ?>"><?php echo $text_login; ?></a></li>
+							<!--<li><a href="<?php echo $login; ?>"><?php echo $text_login; ?></a></li>-->
 						<?php } ?>
 					</ul>
 				</div>

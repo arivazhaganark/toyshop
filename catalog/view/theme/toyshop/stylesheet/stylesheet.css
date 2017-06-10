@@ -1343,7 +1343,7 @@ div.required .control-label:before {
 	font-size:18px;
 }
 .row2-cart .button-cart {
-	display: inline-block;
+	display: block;
     margin-top: 0;
 	margin-right:-10px;
 	margin-left:-10px;
@@ -4862,3 +4862,7 @@ webkit-transition: all 0.5s cubic-bezier(0.215, 0.61, 0.355, 1);
 transition: all 0.5s cubic-bezier(0.215, 0.61, 0.355, 1);
 }
 /*hover images==========================================================================*/
+
+textarea.form-control{
+	height: auto;
+}

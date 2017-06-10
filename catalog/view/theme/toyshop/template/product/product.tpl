@@ -53,7 +53,27 @@
         <?php } ?>
         <div class="<?php echo $class; ?>">
 			<div class="product-name"><h1><?php echo $heading_title; ?></h1></div>
-			<ul class="list-unstyled">
+            <?php if($attribute_groups) { ?>
+            <table class="table table-bordered">
+                <?php foreach ($attribute_groups as $attribute_group) { ?>
+                <!--<thead>
+                <tr>
+                    <td colspan="2"><strong><?php echo $attribute_group['name']; ?></strong></td>
+                </tr>
+                </thead>-->
+                <tbody>
+                <?php foreach ($attribute_group['attribute'] as $attribute) { ?>
+                <tr>
+                    <td><?php echo $attribute['name']; ?></td>
+                    <td><?php echo $attribute['text']; ?></td>
+                </tr>
+                <?php } ?>
+                </tbody>
+                <?php } ?>
+            </table>
+            <?php } ?>
+
+			<ul class="list-unstyled hide">
             <?php if ($manufacturer) { ?>
             <li><?php echo $text_manufacturer; ?> <a href="<?php echo $manufacturers; ?>"><?php echo $manufacturer; ?></a></li>
             <?php } ?>
@@ -64,7 +84,7 @@
             <li><?php echo $text_stock; ?> <?php echo $stock; ?></li>
 			</ul>
           <?php if ($price) { ?>
-          <div class="price">
+          <div class="price hide">
             <?php if (!$special) { ?>
             <?php echo $price; ?>
             <?php } else { ?>
@@ -95,7 +115,7 @@
 			<div class="add-to-links">
 			  <div class="btn-group">
 				<div class="wishlist"><button type="button" class="btn btn-default" title="<?php echo $button_wishlist; ?>" onclick="wishlist.add('<?php echo $product_id; ?>');"><span><?php echo $button_wishlist; ?></span></button></div>
-				<div class="compare"><button type="button" class="btn btn-default" title="<?php echo $button_compare; ?>" onclick="compare.add('<?php echo $product_id; ?>');"><span><?php echo $button_compare; ?></span></button></div>
+				<div class="compare hide"><button type="button" class="btn btn-default" title="<?php echo $button_compare; ?>" onclick="compare.add('<?php echo $product_id; ?>');"><span><?php echo $button_compare; ?></span></button></div>
 			  </div>
 			</div>
 				<?php if ($options) { ?>
@@ -270,7 +290,7 @@
 			<ul class="nav nav-tabs">
             <li class="active"><a href="#tab-description" data-toggle="tab"><?php echo $tab_description; ?></a></li>
             <?php if ($attribute_groups) { ?>
-            <li><a href="#tab-specification" data-toggle="tab"><?php echo $tab_attribute; ?></a></li>
+            <li class="hide"><a href="#tab-specification" data-toggle="tab"><?php echo $tab_attribute; ?></a></li>
             <?php } ?>
             <?php if ($review_status) { ?>
             <li><a href="#tab-review" data-toggle="tab"><?php echo $tab_review; ?></a></li>
@@ -279,7 +299,7 @@
           <div class="tab-content">
             <div class="tab-pane active" id="tab-description"><?php echo $description; ?></div>
             <?php if ($attribute_groups) { ?>
-            <div class="tab-pane" id="tab-specification">
+            <div class="tab-pane hide" id="tab-specification">
               <table class="table table-bordered">
                 <?php foreach ($attribute_groups as $attribute_group) { ?>
                 <thead>

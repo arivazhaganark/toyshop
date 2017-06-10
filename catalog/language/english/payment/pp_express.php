@@ -3,9 +3,9 @@
 $_['express_text_title']      = 'Confirm order';
 
 // Text
-$_['text_title']              = 'PayPal Express Checkout';
+$_['text_title']              = 'PayPal Express Request Quote';
 $_['button_continue']         = 'Continue';
-$_['text_cart']               = 'Shopping Cart';
+$_['text_cart']               = 'Quote';
 $_['text_shipping_updated']   = 'Shipping service updated';
 $_['text_trial']              = '%s every %s %s for %s payments then ';
 $_['text_recurring']          = '%s every %s %s';

@@ -1,6 +1,6 @@
 <?php
 // Text
-$_['text_success']     = 'Success: You have modified your shopping cart!';
+$_['text_success']     = 'Success: You have modified your Quote!';
 
 // Error
 $_['error_permission'] = 'Warning: You do not have permission to access the API!';

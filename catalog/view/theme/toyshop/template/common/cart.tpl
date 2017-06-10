@@ -52,7 +52,10 @@
 				<span class="text1 text-right"><?php echo $total['text']; ?></span>
 			  </div>
 			  <?php } ?>
-			<div class="button-cart text-right"><a href="<?php echo $cart; ?>"><strong><?php echo $text_cart; ?><i class="fa fa-long-arrow-right"></i></strong></a><a href="<?php echo $checkout; ?>"><strong><?php echo $text_checkout; ?><i class="fa fa-long-arrow-right"></i></strong></a></div>
+			<div class="button-cart text-right">
+				<a href="<?php echo $cart; ?>"><strong><?php echo $text_cart; ?><i class="fa fa-long-arrow-right"></i></strong></a>
+				<!--<a href="<?php echo $checkout; ?>"><strong><?php echo $text_checkout; ?><i class="fa fa-long-arrow-right"></i></strong></a>-->
+			</div>
 		</div>
 		</li>
 		<?php } else { ?>
