@@ -17,7 +17,7 @@
                         <div class="item-content">
                             <div class="name"><a
                                         href="<?php echo $product['href']; ?>"><?php echo $product['name']; ?></a></div>
-                            <div class="box-review">
+                            <div class="box-review hide">
                                 <?php if (isset($product['rating'])) { ?>
                                 <div class="rating"><img
                                             src="catalog/view/theme/default/image/stars-<?php echo $product['rating']; ?>.png"
@@ -25,7 +25,7 @@
                                 <?php } ?>
                             </div>
                             <?php if ($product['price']) { ?>
-                            <div class="price">
+                            <div class="price hide">
                                 <?php if (!$product['special']) { ?>
                                 <?php echo $product['price']; ?>
                                 <?php } else { ?>
@@ -48,7 +48,7 @@
                                         <div class="cart">
                                             <button type="button" title="<?php echo $button_cart; ?>" onclick="cart.add('<?php echo $product['product_id']; ?>');"><span><?php echo $button_cart; ?></span></button>
                                         </div>
-                                        <div class="compare">
+                                        <div class="compare hide">
                                             <button type="button" title="<?php echo $button_compare; ?>"
                                                     onclick="compare.add('<?php echo $product['product_id']; ?>');">
                                                 <span><?php echo $button_compare; ?></span></button>
