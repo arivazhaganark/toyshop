@@ -33,7 +33,7 @@ class ControllerModuleRequestquote extends Controller
         $mail->smtp_timeout = $this->config->get('config_mail_smtp_timeout');
 
         $mail->setTo($this->config->get('config_email'));
-        $mail->setFrom('noreply@virattoys.com');
+        $mail->setFrom($this->config->get('config_email'));
         $mail->setSender($this->config->get('config_name'));
         $mail->setSubject("New Request Quote Notification");
         $mail->setHtml($message);
