@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<modification>
+	<id>Request quote for opencart 2.0</id>
+	<version>1.0</version>
+	<vqmver>2.0></vqmver>
+	<author>Ajay</author>
+
+	<file path="catalog/controller/" name="product/product.php">
+        <operation error="log">
+            <search position="after"><![CDATA[public function index() {]]></search>
+            <add><![CDATA[
+                $this->language->load('module/requestquote');
+                $this->document->addScript('catalog/view/javascript/requestquote/main.js');
+
+                $this->load->model('setting/setting');
+                $requestquote_settings = $this->model_setting_setting->getSetting('requestquote');
+                $requestquote_settings['modal_title'] = '';
+
+                if ($requestquote_settings['requestquote_use_module']) {
+                    $data['requestquote_use_module'] = true;
+
+
+                    $data['modal_field_name'] = $this->language->get('modal_field_name');
+                    $data['modal_field_phone'] = $this->language->get('modal_field_phone');
+                    $data['modal_field_email'] = $this->language->get('modal_field_email');
+                    $data['modal_field_comment'] = $this->language->get('modal_field_comment');
+                    $data['button_cancel'] = $this->language->get('button_cancel');
+                    $data['button_send'] = $this->language->get('button_send');
+                    $data['message_system_error'] = $this->language->get('message_system_error');
+                } else {
+                    $data['requestquote_use_module'] = false;
+                }
+
+                $data['requestquote_settings'] = $requestquote_settings;
+                $data['config_template'] = $this->config->get('config_template');
+			]]></add>
+		</operation>
+	</file>
+
+    <file name="catalog/view/theme/*/template/product/product.tpl">
+        <operation error="log">
+            <search position="after"><![CDATA[<button type="button" id="button-cart" data-loading-text="<?php echo $text_loading; ?>" class="btn btn-primary btn-lg btn-block"><span><span class="sp-button" ><?php echo $button_cart; ?></span></span></button>]]></search>
+            <add><![CDATA[
+                <?php if ($requestquote_use_module && $requestquote_as_order) { ?>
+                    &nbsp;<button type="button" data-uk-modal="{target:'#requestquote-modal'}" class="btn btn-primary btn-lg button-quote"><?php echo $requestquote_settings['button_caption']; ?></button>
+                    <?php
+                     if (file_exists(DIR_TEMPLATE . $config_template . '/template/module/requestquote_modal.tpl')) {
+                            $template = $config_template;
+                        } else {
+                             $template = 'default';
+                        }
+                        include_once (__DIR__ . '/../../catalog/view/theme/'.$template.'/template/module/requestquote_modal.tpl');
+                    ?>
+                <?php } ?>
+        ]]></add>
+        </operation>
+    </file>
+</modification>
