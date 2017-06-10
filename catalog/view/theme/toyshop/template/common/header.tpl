@@ -61,15 +61,18 @@ type="text/javascript"></script>
 <div id="top">
   <div class="container">
     <div class="row">
-		<div class="col-md-7 col-sm-12 col-sms-12">
+		<div class="col-md-8 col-sm-12 col-sms-12">
 			<div class="link-contact">
 				<h2 class="address"><?php echo $address; ?></h2>
 				<h2 class="email"><?php echo $email; ?></h2>
 				<h2 class="phone"><?php echo $telephone; ?></h2>
+				<ul class="list-inline links">
+					<li><a class="wishlist" href="<?php echo $wishlist; ?>" id="wishlist-total" title="<?php echo $text_wishlist; ?>"> <span><?php echo $text_wishlist; ?></span></a></li>
+				</ul>
 			</div>
 			<div class="text-welcome"><p><?php //echo $text_msg; ?></p></div>	
 		</div>
-		<div class="col-md-5 col-sm-12 col-sms-12">
+		<div class="col-md-4 col-sm-12 col-sms-12">
 			<div class="currency-language">
 				<div class="header-laguage"><?php echo $language; ?></div>
 				<div class="header-currency"><?php echo $currency; ?></div>
@@ -106,7 +109,7 @@ type="text/javascript"></script>
 				<div class="box-link">
 					<ul class="list-inline links">
 						<!--<li class="dropdown"><a class="account" href="<?php echo $account; ?>"><?php echo $text_account; ?></a></li>-->
-					  <li><a class="wishlist" href="<?php echo $wishlist; ?>" id="wishlist-total" title="<?php echo $text_wishlist; ?>"> <span><?php echo $text_wishlist; ?></span></a></li>
+					  <!--<li><a class="wishlist" href="<?php echo $wishlist; ?>" id="wishlist-total" title="<?php echo $text_wishlist; ?>"> <span><?php echo $text_wishlist; ?></span></a></li>-->
 					<?php if ($logged) { ?>
 						<!--<li><a href="<?php echo $logout; ?>"><?php echo $text_logout; ?></a></li>-->
 						<?php } else { ?>

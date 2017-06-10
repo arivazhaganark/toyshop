@@ -27,8 +27,8 @@
 								- <small><?php echo $text_recurring; ?> <?php echo $product['recurring']; ?></small>
 								<?php } ?>
 							</div>
-							<strong class="text-right"><?php echo $product['quantity']; ?> x</strong>
-							<span class="cart-price text-right"><?php echo $product['total']; ?></span >
+							<strong class="text-right">Qty: <?php echo $product['quantity']; ?></strong>
+							<span class="cart-price text-right hide"> x <?php echo $product['total']; ?></span >
 							<div class="cart-button text-center"><button type="button" onclick="cart.remove('<?php echo $product['key']; ?>');" title="<?php echo $button_remove; ?>" class="btn btn-danger btn-xs"><i class="fa fa-times-circle"></i></button></div>
 						</div>
 					</div>
@@ -47,7 +47,7 @@
 		<li>
 		<div class="row2-cart  div-bordered">
 			  <?php foreach ($totals as $total) { ?>
-			  <div class="box-cart">
+			  <div class="box-cart hide">
 				<span class="text text-right"><strong><?php echo $total['title']; ?> : </strong></span>
 				<span class="text1 text-right"><?php echo $total['text']; ?></span>
 			  </div>
