@@ -267,8 +267,23 @@ class ModelVermegamenuMenu extends Model {
 
  
         $html[] = '</div>';
+
+        $products = $this->model_catalog_product->getProducts(['filter_category_id'  => $id]);
+        if($products) {
+            foreach ($products as $product){
+                $product_link = $this->url->link('product/product', "product_id=".$product['product_id']);
+                $product_name = str_replace('&nbsp;','',strip_tags($product['name']));
+                $html[] = '<div id="pt_ver_menu_p' . $product['product_id'] . '" class="pt_ver_menu' . $active . $over_class .' nav-p-' . $item . ' pt_ver_menu_no_child product_menu">';
+                $html[] = '<div class="parentMenu">';
+                $html[] = '<a href="' . $product_link . '">';
+                $html[] = '<span>' . $product_name . '</span>';
+                $html[] = '</a>';
+                $html[] = '</div>';
+                $html[] = '</div>';
+            }
+        }
 		//echo "<pre>"; print_r($html); echo "</pre>";
-        $html = implode("\n", $html);
+        $html = implode("", $html);
         return $html;
     }
 	

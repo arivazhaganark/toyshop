@@ -286,7 +286,7 @@
           <?php } ?>
         </div>
       </div>
-	  <div class="tab-view">
+	  <div class="tab-view hide">
 			<ul class="nav nav-tabs">
             <li class="active"><a href="#tab-description" data-toggle="tab"><?php echo $tab_description; ?></a></li>
             <?php if ($attribute_groups) { ?>

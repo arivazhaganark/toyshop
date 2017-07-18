@@ -34,98 +34,46 @@
 		</div>
 	</div>
 </div>
-<div class="footer-static-top">
-	<div class="container">
-		<div class="row">
-			<div class="col-sm-8 col-md-8 col-sms-12 col-smb-12">
-				<div class="col col1">
-					<div class="footer-title"><h3><?php echo $popular_categories ?></h3></div>
-					<div class="footer-content">
-						<div class="row">
-							<div class="col col1 col-sm-6 col-md-6 col-sms-12 col-smb-12">
-								<ul>
-									<li class="first"><a href="#"><?php echo $category1 ?></a></li>
-									<li><a href="#"><?php echo $category2 ?></a></li>
-									<li><a href="#"><?php echo $category3 ?></a></li>
-									<li><a href="#"><?php echo $category4 ?></a></li>
-									<li><a href="#"><?php echo $category5 ?></a></li>
-									<li class="last"><a href="#"><?php echo $category6 ?></a></li>
-								</ul>
-							</div>
-							<div class="col col2 col-sm-6 col-md-6 col-sms-12 col-smb-12">
-								<ul>
-									<li class="first"><a href="#"><?php echo $category7 ?></a></li>
-									<li><a href="#"><?php echo $category8 ?></a></li>
-									<li><a href="#"><?php echo $category9 ?></a></li>
-									<li><a href="#"><?php echo $category10 ?></a></li>
-									<li><a href="#"><?php echo $category11 ?></a></li>
-									<li class="last"><a href="#"><?php echo $category12 ?></a></li>
-								</ul>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-			<div class="col-sm-4 col-md-4 col-sms-12 col-smb-12">
-				<div class="col col2">
-					<div class="footer-title"><h3><?php echo $text_newletter; ?></h3></div>
-					<div class="footer-content">
-						<?php echo $content_block2; ?>
-					</div>
-				</div>
-			</div>
-		</div>
-	</div>
-</div>
 <div class="footer">
 	<div class="container">
 		<div class="container-inner">
 		<div class="row">
 			<div class="column col1 col-xs-12 col-sm-6 col-md-3">
-				<div class="footer-title"><h3><?php echo $text_about; ?></h3></div>
+				<div class="footer-title"><h3>Friction Toys</h3></div>
 				<div class="footer-content">
 					<ul class="toggle-footer">
-						<li class="f-phone"><span><?php echo $telephone; ?></span></li>
-						<li><a href="<?php echo $newsletter; ?>"><?php echo $text_newsletter; ?></a></li>
-						<li><a href="<?php echo $sitemap; ?>"><?php echo $text_sitemap; ?></a></li>
-						<li><a href="<?php echo $affiliate; ?>"><?php echo $text_affiliate; ?></a></li>
-						<li><a href="<?php echo $contact; ?>"><?php echo $text_contact; ?></a></li>
+						<li><a href="<?php echo $product_links[0]['url']; ?>"><?php echo $product_links[0]['name']; ?></a></li>
+						<li><a href="<?php echo $product_links[1]['url']; ?>"><?php echo $product_links[1]['name']; ?></a></li>
+						<li><a href="<?php echo $product_links[2]['url']; ?>"><?php echo $product_links[2]['name']; ?></a></li>
 					</ul>
 				</div>
 			</div>
 			<div class="column col2 col-xs-12 col-sm-6 col-md-3">
-				<div class="footer-title"><h3><?php echo $text_service; ?></h3></div>
+				<div class="footer-title"><h3>Friction Toys</h3></div>
 				<div class="footer-content">
 					<ul class="toggle-footer">
-					 <li><a href="<?php echo $order; ?>"><?php echo $text_order; ?></a></li>
-					 <li><a href="<?php echo $return; ?>"><?php echo $text_return; ?></a></li>
-					 <li><a href="<?php echo $sitemap; ?>"><?php echo $text_sitemap; ?></a></li>
-					 <li><a href="<?php echo $special; ?>"><?php echo $text_special; ?></a></li>
-					 <li><a href="<?php echo $manufacturer; ?>"><?php echo $text_manufacturer; ?></a></li>
+						<li><a href="<?php echo $product_links[3]['url']; ?>"><?php echo $product_links[3]['name']; ?></a></li>
+						<li><a href="<?php echo $product_links[4]['url']; ?>"><?php echo $product_links[4]['name']; ?></a></li>
+						<li><a href="<?php echo $product_links[5]['url']; ?>"><?php echo $product_links[5]['name']; ?></a></li>
 					</ul>
 				</div>
 			</div>
 			<div class="column col3 col-xs-12 col-sm-6 col-md-3">
-				<div class="footer-title"><h3><?php echo $text_info ?></h3></div>
+				<div class="footer-title"><h3>Gun Toys</h3></div>
 				<div class="footer-content">
 					<ul class="toggle-footer">
-						<li><a href="<?php echo $wishlist; ?>"><?php echo $text_wishlist; ?></a></li>
-						<li><a href="<?php echo $sitemap; ?>"><?php echo $text_sitemap; ?></a></li>
-						<li><a href="#"><?php echo $text_dynamicus; ?></a></li>
-						<li><a href="#"><?php echo $text_terms; ?></a></li>
-						<li><a href="<?php echo $order; ?>"><?php echo $text_order; ?></a></li>
+						<li><a href="<?php echo $product_links[6]['url']; ?>"><?php echo $product_links[6]['name']; ?></a></li>
 					</ul>
 				</div>
 			</div>
 			<div class="column col4 col-xs-12 col-sm-6 col-md-3">
-				<div class="footer-title"><h3><?php echo $text_gift ?></h3></div>
+				<div class="footer-title"><h3><?php echo $text_info ?></h3></div>
 				<div class="footer-content">
 					<ul class="toggle-footer">
+						<li class="f-phone"><span><?php echo $telephone; ?></span></li>
 						<li><a href="<?php echo $sitemap; ?>"><?php echo $text_sitemap; ?></a></li>
-						 <li><a href="<?php echo $manufacturer; ?>"><?php echo $text_manufacturer; ?></a></li>
-						 <li><a href="<?php echo $special; ?>"><?php echo $text_special; ?></a></li>
-						 <li><a href="#"><?php echo $text_dynamicus; ?></a></li>
-						 <li><a href="<?php echo $return; ?>"><?php echo $text_return; ?></a></li>
+						<li><a href="#"><?php echo $text_terms; ?></a></li>
+						<li><a href="#">Privacy Policy</a></li>
 					</ul>
 				</div>
 			</div>
