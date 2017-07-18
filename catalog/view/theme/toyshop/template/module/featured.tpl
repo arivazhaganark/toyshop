@@ -40,7 +40,7 @@
                             <div class="actions">
                                 <div class="button-group">
                                     <div class="add-to-links">
-                                        <div class="wishlist">
+                                        <div class="wishlist hide">
                                             <button type="button" title="<?php echo $button_wishlist; ?>"
                                                     onclick="wishlist.add('<?php echo $product['product_id']; ?>');">
                                                 <span><?php echo $button_wishlist; ?></span></button>

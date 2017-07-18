@@ -114,7 +114,7 @@
           <div id="product">
 			<div class="add-to-links">
 			  <div class="btn-group">
-				<div class="wishlist"><button type="button" class="btn btn-default" title="<?php echo $button_wishlist; ?>" onclick="wishlist.add('<?php echo $product_id; ?>');"><span><?php echo $button_wishlist; ?></span></button></div>
+				<div class="wishlist hide"><button type="button" class="btn btn-default" title="<?php echo $button_wishlist; ?>" onclick="wishlist.add('<?php echo $product_id; ?>');"><span><?php echo $button_wishlist; ?></span></button></div>
 				<div class="compare hide"><button type="button" class="btn btn-default" title="<?php echo $button_compare; ?>" onclick="compare.add('<?php echo $product_id; ?>');"><span><?php echo $button_compare; ?></span></button></div>
 			  </div>
 			</div>
@@ -398,7 +398,7 @@
 				<div class="actions">
 					<div class="button-group">
 						<div class="add-to-links">
-							<div class="wishlist"><button type="button" title="<?php echo $button_wishlist; ?>" onclick="wishlist.add('<?php echo $product['product_id']; ?>');"><span><?php echo $button_wishlist; ?></span></button></div>
+							<div class="wishlist hide"><button type="button" title="<?php echo $button_wishlist; ?>" onclick="wishlist.add('<?php echo $product['product_id']; ?>');"><span><?php echo $button_wishlist; ?></span></button></div>
 							<div class="cart"><button type="button" onclick="cart.add('<?php echo $product['product_id']; ?>');"><span><?php echo $button_cart; ?></span></button></div>
 							<div class="compare"><button type="button" title="<?php echo $button_compare; ?>" onclick="compare.add('<?php echo $product['product_id']; ?>');"><span><?php echo $button_compare; ?></span></button></div>
 						</div>

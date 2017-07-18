@@ -66,7 +66,7 @@ type="text/javascript"></script>
 				<h2 class="address"><?php echo $address; ?></h2>
 				<h2 class="email"><?php echo $email; ?></h2>
 				<h2 class="phone"><?php echo $telephone; ?></h2>
-				<ul class="list-inline links">
+				<ul class="list-inline links hide">
 					<li><a class="wishlist" href="<?php echo $wishlist; ?>" id="wishlist-total" title="<?php echo $text_wishlist; ?>"> <span><?php echo $text_wishlist; ?></span></a></li>
 				</ul>
 			</div>

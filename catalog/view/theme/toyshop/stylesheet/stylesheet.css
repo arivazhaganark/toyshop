@@ -2369,9 +2369,10 @@ a.btn { color:#fff; }
 .item-inner .add-to-links div.cart button:hover,
 .item-inner .add-to-links div.compare button:hover,
 .item-inner .add-to-links div.wishlist button:hover {
-	background: #fff;
+	/*background: #fff;
     border: 1px solid #e5e5e5;
-    border-bottom: 2px solid #e5e5e5
+    border-bottom: 2px solid #e5e5e5*/
+	color: #ffffff;
 }
 .item-inner .add-to-links div.cart button:hover:before,.item-inner .add-to-links div.cart button:hover span,
 .item-inner .add-to-links div.compare button:hover:before,
@@ -4867,9 +4868,9 @@ textarea.form-control{
 	height: auto;
 }
 
-.item-inner:hover .add-to-links div.cart {
-	right: -20px;
-}
+/*.item-inner:hover .add-to-links div.cart {*/
+	/*right: -20px;*/
+/*}*/
 
 .item-inner .add-to-links div.cart {
 	-moz-transition: all 0.5s ease;
