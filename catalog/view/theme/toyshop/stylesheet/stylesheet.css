@@ -3591,8 +3591,8 @@ ul.tabs li span:hover,ul.tabs li.active span {
 .close-wrap a:hover,
 .more-wrap a:hover { background:none !important; }
 .title-vermegamenu {
-	border-bottom:3px solid #f35c9f;
-    background: url("../image/title-category.png") no-repeat 14px 50% #f981a6;
+	border-bottom:3px solid #22adc2;
+    background: url("../image/title-category.png") no-repeat 14px 50% #63c4d3;
     padding-left: 45px;
 }
 .vermagemenu h2{
