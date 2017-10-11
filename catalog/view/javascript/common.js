@@ -282,7 +282,8 @@ var cart = {
 
 					$('#cart-total').html(json['total']);
 
-					$('html, body').animate({ scrollTop: 0 }, 'slow');
+					// $('html, body').animate({ scrollTop: 0 }, 'slow');
+					alert('Added');
 
 					$('#cart > .top-cart-contain > ul').load('index.php?route=common/cart/info ul li');
 				}
@@ -384,7 +385,7 @@ var wishlist = {
 
 				$('#wishlist-total').html(json['total']);
 
-				$('html, body').animate({ scrollTop: 0 }, 'slow');
+				// $('html, body').animate({ scrollTop: 0 }, 'slow');
 			}
 		});
 	},

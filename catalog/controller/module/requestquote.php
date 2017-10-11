@@ -44,6 +44,7 @@ class ControllerModuleRequestquote extends Controller
 
     public function thankyou()
     {
+        $this->load->model('catalog/product');
         $this->cart->clear();
 
         unset($this->session->data['shipping_method']);
